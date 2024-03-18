@@ -2,7 +2,7 @@
 
 [![.NET](https://img.shields.io/github/actions/workflow/status/JKorf/Binance.Net/dotnet.yml?style=for-the-badge)](https://github.com/JKorf/Binance.Net/actions/workflows/dotnet.yml) ![License](https://img.shields.io/github/license/JKorf/Binance.Net?style=for-the-badge)
 
-Binance.Net is a client library for accessing the [Binance REST and Websocket API](https://binance-docs.github.io/apidocs/#change-log). All data is mapped to readable models and enum values. Additional features include an implementation for maintaining a client side order book, easy integration with other exchange client libraries and more.
+Binance.Net is a strongly typed client library for accessing the [Binance REST and Websocket API](https://binance-docs.github.io/apidocs/#change-log). All data is mapped to readable models and enum values. Additional features include an implementation for maintaining a client side order book, easy integration with other exchange client libraries and more.
 
 ## Supported Frameworks
 The library is targeting both `.NET Standard 2.0` and `.NET Standard 2.1` for optimal compatibility
@@ -85,7 +85,7 @@ A Discord server is available [here](https://discord.gg/MSpeEtSY8t). For discuss
 |Margin Account/Trade|Partial|`restClient.SpotApi.Account` / `restClient.SpotApi.Trading`|
 |User Data Streams|✓|`socketClient.SpotApi.Account`|
 |Margin User Data Streams|X||
-|Simple Earn Endpoints|Outdated||
+|Simple Earn Endpoints|✓|`restClient.GeneralApi.SimpleEarn`|
 |Auto-Invest Endpoints|X||
 |Staking Endpoints|✓|`restClient.GeneralApi.Staking`|
 |Mining Endpoints|✓|`restClient.GeneralApi.Mining`|
@@ -152,6 +152,12 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 9.7.0 - 16 Mar 2024
+    * Updated CryptoExchange.Net to 7.1.0, see https://github.com/JKorf/CryptoExchange.Net?tab=readme-ov-file#release-notes for release notes
+    * Added websocket max message size to prevent timeouts and weird behavior when sending large requests
+    * Updated WebCallResult<object> return endpoints to WebCallResult return
+    * Added parameter on futures stream trades stream for ignoring non trade updates
+
 * Version 9.6.1 - 29 Feb 2024
     * Fix for user data websocket streams subscriptions
 
