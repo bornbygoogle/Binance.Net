@@ -807,7 +807,7 @@
         <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiMining.GetMiningAccountEarningsAsync(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiSavings.GetFlexibleProductListAsync(System.Nullable{Binance.Net.Enums.ProductStatus},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiSimpleEarn.GetFlexibleProductsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiSimpleEarn.GetLockedProductsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
@@ -825,7 +825,7 @@
         <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiSimpleEarn.RedeemLockedProductAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiSavings.GetFlexibleProductPositionAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiSimpleEarn.GetFlexibleProductPositionsAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiSimpleEarn.GetLockedProductPositionsAsync(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
@@ -6853,7 +6853,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiSavings.GetFlexibleProductListAsync(System.Nullable{Binance.Net.Enums.ProductStatus},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+        <member name="T:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiSimpleEarn">
             <summary>
             Binance simple earn endpoints
             </summary>
@@ -6931,7 +6931,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiSavings.GetFlexibleProductPositionAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiSimpleEarn.GetFlexibleProductPositionsAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get flexible product position info
             <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-flexible-product-position-user_data" /></para>
@@ -14101,59 +14101,19 @@
             Status
             </summary>
         </member>
-        <member name="T:Binance.Net.Objects.Models.Spot.BinanceConvertTrade">
+        <member name="T:Binance.Net.Objects.Models.Spot.BinanceDelistSchedule">
             <summary>
-            Convert trade info
+            Spot symbol delist info
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinanceConvertTrade.QuoteId">
+        <member name="P:Binance.Net.Objects.Models.Spot.BinanceDelistSchedule.DelistTime">
             <summary>
-            Quote id
+            Delist time
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinanceConvertTrade.OrderId">
+        <member name="P:Binance.Net.Objects.Models.Spot.BinanceDelistSchedule.Symbols">
             <summary>
-            Order id
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinanceConvertTrade.OrderStatus">
-            <summary>
-            Order status
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinanceConvertTrade.FromAsset">
-            <summary>
-            From asset
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinanceConvertTrade.FromQuantity">
-            <summary>
-            From quantity
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinanceConvertTrade.ToAsset">
-            <summary>
-            To asset
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinanceConvertTrade.ToQuantity">
-            <summary>
-            To quantity
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinanceConvertTrade.Ratio">
-            <summary>
-            Price ratio
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinanceConvertTrade.InverseRatio">
-            <summary>
-            Inverse price ratio
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinanceConvertTrade.CreateTime">
-            <summary>
-            Creation time
+            Symbols being delisted
             </summary>
         </member>
         <member name="T:Binance.Net.Objects.Models.Spot.BinanceDepositAddress">
