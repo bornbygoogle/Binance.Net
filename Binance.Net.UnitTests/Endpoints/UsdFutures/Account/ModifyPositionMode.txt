@@ -1,5 +1,9 @@
 POST
+<<<<<<<< HEAD:Binance.Net.UnitTests/Endpoints/UsdFutures/Account/SetMultiAssetsMode.txt
+/fapi/v1/multiAssetsMargin
+========
 /fapi/v1/positionSide/dual
+>>>>>>>> master:Binance.Net.UnitTests/Endpoints/UsdFutures/Account/ModifyPositionMode.txt
 true
 {
     "code": 200,

@@ -427,7 +427,7 @@
         <member name="M:Binance.Net.Clients.CoinFuturesApi.BinanceRestClientCoinFuturesApiTrading.PlaceOrderAsync(System.String,Binance.Net.Enums.OrderSide,Binance.Net.Enums.FuturesOrderType,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.PositionSide},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Boolean},System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.WorkingType},System.Nullable{System.Boolean},System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.CoinFuturesApi.BinanceRestClientCoinFuturesApiTrading.PlaceMultipleOrdersAsync(Binance.Net.Objects.Models.Futures.BinanceFuturesBatchOrder[],System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Clients.CoinFuturesApi.BinanceRestClientCoinFuturesApiTrading.PlaceMultipleOrdersAsync(System.Collections.Generic.IEnumerable{Binance.Net.Objects.Models.Futures.BinanceFuturesBatchOrder},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Binance.Net.Clients.CoinFuturesApi.BinanceRestClientCoinFuturesApiTrading.GetOrderAsync(System.String,System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
@@ -442,7 +442,7 @@
         <member name="M:Binance.Net.Clients.CoinFuturesApi.BinanceRestClientCoinFuturesApiTrading.CancelAllOrdersAfterTimeoutAsync(System.String,System.TimeSpan,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.CoinFuturesApi.BinanceRestClientCoinFuturesApiTrading.CancelMultipleOrdersAsync(System.String,System.Collections.Generic.List{System.Int64},System.Collections.Generic.List{System.String},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Clients.CoinFuturesApi.BinanceRestClientCoinFuturesApiTrading.CancelMultipleOrdersAsync(System.String,System.Collections.Generic.IEnumerable{System.Int64},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Binance.Net.Clients.CoinFuturesApi.BinanceRestClientCoinFuturesApiTrading.GetOpenOrderAsync(System.String,System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
@@ -5582,7 +5582,7 @@
             <param name="ct">Cancellation token</param>
             <returns>Id's for the placed order</returns>
         </member>
-        <member name="M:Binance.Net.Interfaces.Clients.CoinFuturesApi.IBinanceRestClientCoinFuturesApiTrading.PlaceMultipleOrdersAsync(Binance.Net.Objects.Models.Futures.BinanceFuturesBatchOrder[],System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Interfaces.Clients.CoinFuturesApi.IBinanceRestClientCoinFuturesApiTrading.PlaceMultipleOrdersAsync(System.Collections.Generic.IEnumerable{Binance.Net.Objects.Models.Futures.BinanceFuturesBatchOrder},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Place multiple orders in one call
             <para><a href="https://binance-docs.github.io/apidocs/delivery/en/#place-multiple-orders-trade" /></para>
@@ -5638,7 +5638,7 @@
             <param name="ct">Cancellation token</param>
             <returns>Countdown result</returns>
         </member>
-        <member name="M:Binance.Net.Interfaces.Clients.CoinFuturesApi.IBinanceRestClientCoinFuturesApiTrading.CancelMultipleOrdersAsync(System.String,System.Collections.Generic.List{System.Int64},System.Collections.Generic.List{System.String},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Interfaces.Clients.CoinFuturesApi.IBinanceRestClientCoinFuturesApiTrading.CancelMultipleOrdersAsync(System.String,System.Collections.Generic.IEnumerable{System.Int64},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Cancels muliple orders
             <para><a href="https://binance-docs.github.io/apidocs/delivery/en/#cancel-multiple-orders-trade" /></para>
@@ -15155,6 +15155,26 @@
             Binance pay trade
             </summary>
         </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTrade.Uid">
+            <summary>
+            Uid
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTrade.CounterPartyId">
+            <summary>
+            Counter party id
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTrade.OrderId">
+            <summary>
+            Order id
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTrade.Note">
+            <summary>
+            Note
+            </summary>
+        </member>
         <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTrade.OrderType">
             <summary>
             Order type
@@ -15173,6 +15193,11 @@
         <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTrade.Quantity">
             <summary>
             Quantity
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTrade.TotalPaymentFee">
+            <summary>
+            Total fee
             </summary>
         </member>
         <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTrade.Asset">
@@ -15215,74 +15240,54 @@
             Quantity
             </summary>
         </member>
-        <member name="T:Binance.Net.Objects.Models.Spot.BinancePayTradePayerInfo">
-            <summary>
-            Pay trade payer info
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradePayerInfo.Name">
-            <summary>
-            Nickname or merchant name
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradePayerInfo.Type">
-            <summary>
-            Account type，USER for personal，MERCHANT for merchant
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradePayerInfo.BinanceId">
-            <summary>
-            Binance uid
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradePayerInfo.AccountId">
-            <summary>
-            Binance pay id
-            </summary>
-        </member>
-        <member name="T:Binance.Net.Objects.Models.Spot.BinancePayTradeReceiverInfo">
+        <member name="T:Binance.Net.Objects.Models.Spot.BinancePayTradeParticipantInfo">
             <summary>
             Pay trade receiver info
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeReceiverInfo.Name">
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeParticipantInfo.Name">
             <summary>
             Nickname or merchant name
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeReceiverInfo.Type">
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeParticipantInfo.Type">
             <summary>
             Account type，USER for personal，MERCHANT for merchant
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeReceiverInfo.Email">
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeParticipantInfo.Email">
             <summary>
             Email
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeReceiverInfo.BinanceId">
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeParticipantInfo.BinanceId">
             <summary>
             Binance uid
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeReceiverInfo.AccountId">
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeParticipantInfo.AccountId">
             <summary>
             Binance pay id
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeReceiverInfo.CountryCode">
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeParticipantInfo.CountryCode">
             <summary>
             International area code
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeReceiverInfo.PhoneNumber">
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeParticipantInfo.PhoneNumber">
             <summary>
             Phone number
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeReceiverInfo.MobileCode">
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeParticipantInfo.MobileCode">
             <summary>
             Country code
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinancePayTradeParticipantInfo.UnmaskData">
+            <summary>
+            Unmask data
             </summary>
         </member>
         <member name="T:Binance.Net.Objects.Models.Spot.BinancePlacedOrder">
@@ -26607,6 +26612,11 @@
             Coin position info
             </summary>
         </member>
+        <member name="P:Binance.Net.Objects.Models.Futures.BinancePositionInfoCoin.BreakEvenPrice">
+            <summary>
+            Break even price
+            </summary>
+        </member>
         <member name="P:Binance.Net.Objects.Models.Futures.BinancePositionInfoCoin.MaxQuantity">
             <summary>
             Max quantity
@@ -26680,6 +26690,11 @@
         <member name="T:Binance.Net.Objects.Models.Futures.BinancePositionDetailsCoin">
             <summary>
             Coin position info
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Futures.BinancePositionDetailsCoin.NotionalValue">
+            <summary>
+            Notional value
             </summary>
         </member>
         <member name="P:Binance.Net.Objects.Models.Futures.BinancePositionDetailsCoin.MaxQuantity">

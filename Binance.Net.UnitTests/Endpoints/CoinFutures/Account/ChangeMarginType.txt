@@ -1,0 +1,11 @@
+POST
+<<<<<<<< HEAD:Binance.Net.UnitTests/Endpoints/UsdFutures/Account/ModifyPositionMode.txt
+/fapi/v1/positionSide/dual
+========
+/dapi/v1/marginType
+>>>>>>>> master:Binance.Net.UnitTests/Endpoints/CoinFutures/Account/ChangeMarginType.txt
+true
+{
+    "code": 200,
+    "msg": "success"
+}
