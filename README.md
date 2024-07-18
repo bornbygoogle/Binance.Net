@@ -2,7 +2,16 @@
 
 [![.NET](https://img.shields.io/github/actions/workflow/status/JKorf/Binance.Net/dotnet.yml?style=for-the-badge)](https://github.com/JKorf/Binance.Net/actions/workflows/dotnet.yml) ![License](https://img.shields.io/github/license/JKorf/Binance.Net?style=for-the-badge)
 
-Binance.Net is a strongly typed client library for accessing the [Binance REST and Websocket API](https://binance-docs.github.io/apidocs/#change-log). All data is mapped to readable models and enum values. Additional features include an implementation for maintaining a client side order book, easy integration with other exchange client libraries and more.
+Binance.Net is a strongly typed client library for accessing the [Binance REST and Websocket API](https://binance-docs.github.io/apidocs/#change-log). 
+## Features
+* Response data is mapped to descriptive models
+* Input parameters and response values are mapped to discriptive enum values where possible
+* Automatic websocket (re)connection management 
+* Client side rate limiting 
+* Cient side order book implementation
+* Extensive logging
+* Support for different environments (binance.com, binance.us, testnet)
+* Easy integration with other exchange client based on the CryptoExchange.Net base library
 
 ## Supported Frameworks
 The library is targeting both `.NET Standard 2.0` and `.NET Standard 2.1` for optimal compatibility
@@ -155,6 +164,11 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 9.12.0 - 16 Jul 2024
+    * Updated CryptoExchange.Net to version 7.9.0, see https://github.com/JKorf/CryptoExchange.Net/releases/tag/7.9.0
+    * Updated internal classes to internal access modifier
+    * Updated WebSocket rate limit rule to prevent triggering disconnect
+
 * Version 9.11.1 - 02 Jul 2024
     * Updated CryptoExchange.Net to V7.8.0
     * Updated ratelimiting for per-endpoint limits
