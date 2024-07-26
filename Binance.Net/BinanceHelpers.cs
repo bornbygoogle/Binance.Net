@@ -50,7 +50,7 @@ namespace Binance.Net
         /// <returns></returns>
         public static decimal FloorPrice(decimal tickSize, decimal price)
         {
-            price -= price % tickSize;
+            price -= price % (tickSize == 0 ? 1 : tickSize);
             price = Floor(price);
             return price;
         }
